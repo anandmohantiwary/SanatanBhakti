@@ -29,3 +29,7 @@ This is a starter package. Ritual content must be checked against named texts or
 ## Enquiry form limitation
 
 The static enquiry form opens a prefilled email draft; it does not submit data to a server or store visitor details.
+
+## Images
+
+Locally stored devotional imagery is in `assets/images/`. The images are CC0 and their source pages and creator metadata are recorded in [`assets/images/README.md`](assets/images/README.md).

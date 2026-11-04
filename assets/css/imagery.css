@@ -1,0 +1,473 @@
+body {
+  background-image:
+    radial-gradient(ellipse at 4% 24%, rgba(198, 155, 81, .055), transparent 28rem),
+    radial-gradient(ellipse at 96% 58%, rgba(91, 106, 77, .035), transparent 32rem);
+}
+
+.home-banner {
+  width: 100%;
+  overflow: hidden;
+  background: #e8ad4c;
+}
+
+.home-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.page-home .hero {
+  background-image:
+    radial-gradient(ellipse at 85% 30%, rgba(198, 155, 81, .18), transparent 30%),
+    linear-gradient(90deg, #fbf7f0 0%, rgba(251, 247, 240, .97) 42%, rgba(251, 247, 240, .65) 67%, rgba(251, 247, 240, .2) 100%),
+    url("../images/deepak.jpg");
+  background-position: center, center, right 46%;
+  background-size: cover, cover, auto 112%;
+  background-repeat: no-repeat;
+}
+
+.page-home .hero-ornament {
+  z-index: 0;
+  color: rgba(134, 67, 33, .075);
+}
+
+.page-home .feature-card,
+.page-puja .puja-card,
+.page-library .feature-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.page-home .feature-card::after,
+.page-puja .puja-card::after,
+.page-library .feature-card::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: -12px;
+  bottom: -16px;
+  width: 124px;
+  height: 118px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  opacity: .14;
+  mask-image: radial-gradient(ellipse, #000 30%, transparent 76%);
+  pointer-events: none;
+}
+
+.page-home .feature-card:nth-child(1)::after,
+.page-puja .puja-card:nth-child(1)::after,
+.page-guide .source-placeholder::after {
+  background-image: url("../images/kalash-puja.jpg");
+}
+
+.page-home .feature-card:nth-child(2)::after,
+.page-library .feature-card:nth-child(1)::after,
+.page-sources .source-placeholder::after {
+  background-image: url("../images/marigold-flowers.jpg");
+}
+
+.page-home .feature-card:nth-child(3)::after,
+.page-puja .puja-card:nth-child(2)::after,
+.page-bhajan .bhajan-card[data-tone="kirtan"]::before {
+  background-image: url("../images/sitar.jpg");
+}
+
+.page-home .feature-card:nth-child(4)::after,
+.page-puja .puja-card:nth-child(3)::after,
+.page-library .feature-card:nth-child(2)::after {
+  background-image: url("../images/deepak.jpg");
+}
+
+.page-puja .puja-card::after {
+  right: 0;
+  bottom: 0;
+  width: 116px;
+  height: 100%;
+  border-radius: 0;
+  opacity: .12;
+  mask-image: linear-gradient(90deg, transparent, #000);
+}
+
+.page-library .feature-card::after {
+  right: 0;
+  bottom: 0;
+  width: 42%;
+  height: 100%;
+  border-radius: 0;
+  opacity: .12;
+  mask-image: linear-gradient(90deg, transparent, #000);
+}
+
+.page-puja,
+.page-guide {
+  --page-hero-image: url("../images/kalash-puja.jpg");
+}
+
+.page-library,
+.page-sources {
+  --page-hero-image: url("../images/marigold-flowers.jpg");
+}
+
+.page-bhajan {
+  --page-hero-image: url("../images/sitar.jpg");
+}
+
+.page-gallery {
+  --page-hero-image: url("../images/kalash-puja.jpg");
+}
+
+.page-enquiry {
+  --page-hero-image: url("../images/deepak.jpg");
+}
+
+.page-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.satyanarayan-hero {
+  background:
+    radial-gradient(ellipse at 82% 48%, rgba(198, 155, 81, .2), transparent 34%),
+    linear-gradient(120deg, #f8eee0, #fffaf3 68%, #f3e3ce);
+}
+
+.satyanarayan-hero::after {
+  display: none;
+}
+
+.satyanarayan-hero .container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, .72fr);
+  column-gap: clamp(32px, 6vw, 76px);
+  align-items: center;
+}
+
+.satyanarayan-hero .eyebrow,
+.satyanarayan-hero h1,
+.satyanarayan-hero .container > p:not(.eyebrow),
+.satyanarayan-hero .meta-row {
+  grid-column: 1;
+}
+
+.satyanarayan-hero .eyebrow {
+  grid-row: 1;
+}
+
+.satyanarayan-hero h1 {
+  grid-row: 2;
+}
+
+.satyanarayan-hero .container > p:not(.eyebrow) {
+  grid-row: 3;
+  margin-bottom: 0;
+}
+
+.satyanarayan-hero .meta-row {
+  grid-row: 4;
+}
+
+.satyanarayan-hero-art {
+  grid-column: 2;
+  grid-row: 1 / span 4;
+  justify-self: center;
+  width: min(100%, 340px);
+  margin: 0;
+  padding: 10px 10px 14px;
+  border: 1px solid rgba(181, 129, 69, .35);
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgba(255, 253, 249, .9), rgba(244, 224, 193, .84));
+  box-shadow: 0 18px 38px rgba(87, 53, 28, .16), inset 0 0 0 4px rgba(255, 255, 255, .55);
+  text-align: center;
+}
+
+.satyanarayan-hero-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(120, 76, 35, .18);
+  border-radius: 14px;
+  box-shadow: 0 7px 18px rgba(65, 39, 21, .14);
+}
+
+.satyanarayan-hero-art figcaption {
+  padding-top: 9px;
+  color: #79533b;
+  font-family: "Noto Sans Devanagari", serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .04em;
+}
+
+.ganesha-mantra-art,
+.surya-mantra-art,
+.vishnu-mantra-art,
+.shiva-mantra-art,
+.durga-mantra-art,
+.navagraha-mantra-art,
+.kalash-puja-art,
+.satyanarayan-katha-art {
+  display: grid;
+  place-items: center;
+  width: min(100%, 460px);
+  margin: 22px auto 30px;
+  padding: 10px;
+  border: 1px solid rgba(181, 129, 69, .35);
+  border-radius: 16px;
+  background: linear-gradient(145deg, #fffdf9, #f4e4cc);
+  box-shadow: 0 12px 28px rgba(65, 39, 21, .12);
+}
+
+.ganesha-mantra-art img,
+.surya-mantra-art img,
+.vishnu-mantra-art img,
+.shiva-mantra-art img,
+.durga-mantra-art img,
+.navagraha-mantra-art img,
+.kalash-puja-art img,
+.satyanarayan-katha-art img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: min(68vh, 520px);
+  height: auto;
+  object-fit: contain;
+  border-radius: 9px;
+}
+
+.page-hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  width: min(44%, 620px);
+  height: 100%;
+  background-image: var(--page-hero-image, url("../images/marigold-flowers.jpg"));
+  background-position: center;
+  background-size: cover;
+  opacity: .24;
+  mask-image: linear-gradient(90deg, transparent, #000 30%);
+  pointer-events: none;
+}
+
+.page-hero > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.page-bhajan .page-hero::after {
+  display: none;
+}
+
+.page-home .section-tint {
+  background:
+    linear-gradient(rgba(248, 241, 231, .91), rgba(248, 241, 231, .91)),
+    url("../images/marigold-flowers.jpg") center 48% / cover fixed;
+}
+
+.page-guide .source-placeholder,
+.page-sources .source-placeholder {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.page-guide .source-placeholder::after,
+.page-sources .source-placeholder::after {
+  z-index: -1;
+  right: 4px;
+  bottom: -24px;
+  width: 145px;
+  height: 145px;
+  opacity: .13;
+}
+
+.page-enquiry .contact-card {
+  background:
+    linear-gradient(rgba(255, 253, 249, .91), rgba(255, 253, 249, .91)),
+    url("../images/marigold-flowers.jpg") center / cover;
+}
+
+.page-bhajan .bhajan-hero-art {
+  min-height: 280px;
+}
+
+.page-bhajan .bhajan-hero-art::before {
+  content: "";
+  position: absolute;
+  width: min(78%, 290px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(181, 129, 69, .25);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, .65), rgba(245, 225, 190, .16) 70%, transparent 72%);
+}
+
+.page-bhajan .bhajan-hero-sitar {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: min(100%, 470px);
+  height: auto;
+  border-radius: 50%;
+  opacity: .88;
+  mix-blend-mode: multiply;
+  filter: drop-shadow(0 10px 12px rgba(87, 53, 28, .12));
+  mask-image: radial-gradient(ellipse, #000 42%, transparent 78%);
+}
+
+.page-bhajan .bhajan-card[data-tone="kirtan"]::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: auto -20px -36px auto;
+  width: 150px;
+  height: 120px;
+  background-position: center;
+  background-size: cover;
+  opacity: .12;
+  mask-image: radial-gradient(ellipse, #000 20%, transparent 78%);
+  pointer-events: none;
+}
+
+.page-gallery .gallery-placeholder {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 0;
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(45, 33, 28, .16);
+}
+
+.page-gallery .gallery-image {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .45s ease;
+}
+
+.page-gallery .gallery-placeholder::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(36, 24, 18, .86), rgba(36, 24, 18, .06) 76%);
+}
+
+.page-gallery .gallery-placeholder:hover .gallery-image {
+  transform: scale(1.045);
+}
+
+.page-gallery .gallery-placeholder > span,
+.page-gallery .gallery-placeholder > h3,
+.page-gallery .gallery-placeholder > p {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, .35);
+}
+
+.page-gallery .gallery-placeholder > span {
+  font-size: 30px;
+}
+
+.page-gallery .gallery-placeholder > p {
+  font-size: 12px;
+}
+
+.page-not-found .not-found {
+  position: relative;
+  isolation: isolate;
+}
+
+.page-not-found .not-found::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 8%;
+  right: 0;
+  width: min(38vw, 430px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: url("../images/deepak.jpg") center 54% / cover;
+  opacity: .12;
+  mask-image: radial-gradient(circle, #000 25%, transparent 72%);
+}
+
+@media (max-width: 760px) {
+  .satyanarayan-hero .container {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 0;
+  }
+
+  .satyanarayan-hero .eyebrow,
+  .satyanarayan-hero h1,
+  .satyanarayan-hero .container > p:not(.eyebrow),
+  .satyanarayan-hero .meta-row,
+  .satyanarayan-hero-art {
+    grid-column: 1;
+  }
+
+  .satyanarayan-hero .eyebrow {
+    grid-row: 1;
+  }
+
+  .satyanarayan-hero h1 {
+    grid-row: 2;
+  }
+
+  .satyanarayan-hero-art {
+    grid-row: 3;
+    width: min(72%, 290px);
+    margin: 4px auto 20px;
+  }
+
+  .satyanarayan-hero .container > p:not(.eyebrow) {
+    grid-row: 4;
+  }
+
+  .satyanarayan-hero .meta-row {
+    grid-row: 5;
+  }
+
+  .page-home .hero {
+    background-image:
+      linear-gradient(90deg, rgba(251, 247, 240, .98), rgba(251, 247, 240, .9)),
+      url("../images/deepak.jpg");
+    background-position: center, right center;
+    background-size: cover, auto 100%;
+  }
+
+  .page-hero::after {
+    width: 48%;
+    opacity: .16;
+  }
+
+  .page-bhajan .bhajan-hero-art {
+    min-height: 190px;
+  }
+
+  .page-bhajan .bhajan-hero-sitar {
+    width: min(100%, 250px);
+  }
+
+  .page-gallery .gallery-placeholder {
+    min-height: 190px;
+  }
+
+  .page-home .section-tint {
+    background-attachment: scroll;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-gallery .gallery-image {
+    transition: none;
+  }
+}

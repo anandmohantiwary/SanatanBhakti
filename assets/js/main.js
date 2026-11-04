@@ -5,7 +5,7 @@
     ["Home", "index.html"],
     ["Puja Vidhi", "puja/index.html"],
     ["Samagri & Mantras", "library/index.html"],
-    ["Bhajan & Path", "bhajan/index.html"],
+    ["Bhajan", "bhajan/index.html"],
     ["Gallery", "gallery/index.html"],
     ["Enquiry", "enquiry/index.html"]
   ];
