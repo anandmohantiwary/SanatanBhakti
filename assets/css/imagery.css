@@ -238,6 +238,51 @@ body {
   border-radius: 9px;
 }
 
+.satyanarayan-katha-page {
+  width: 100%;
+  margin: 24px auto 32px;
+  padding: 8px;
+  border: 1px solid rgba(181, 129, 69, .35);
+  border-radius: 12px;
+  background: linear-gradient(145deg, #fffdf9, #f4e4cc);
+  box-shadow: 0 12px 28px rgba(65, 39, 21, .12);
+}
+
+.satyanarayan-katha-page img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 7px;
+}
+
+.article .satyanarayan-aarti {
+  max-width: 480px;
+  margin: 0 0 28px;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: #fffdf7;
+  color: #222;
+  font-family: "Noto Serif Devanagari", serif;
+  font-size: 1.15rem;
+  line-height: 1.9;
+}
+
+.article .satyanarayan-aarti h2 {
+  margin: 0 0 1rem;
+  color: #e0451a;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.article .satyanarayan-aarti p {
+  margin: 0 0 1.2rem;
+}
+
+.article .satyanarayan-aarti .opening {
+  font-style: italic;
+}
+
 .page-hero::after {
   content: "";
   position: absolute;
