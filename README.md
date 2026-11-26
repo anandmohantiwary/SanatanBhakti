@@ -15,7 +15,7 @@ Repository: https://github.com/anandmohantiwary/SanatanBhakti
 ## Included pages
 
 - `index.html` — home page
-- `puja/` — puja index and Satyanarayan Puja starter guide
+- `puja/` — puja index, Satyanarayan Puja starter guide, and embedded Saral Rudri PDF viewer
 - `library/` — samagri and mantra reference index
 - `bhajan/` — bhajan and path resources
 - `gallery/` — ceremony gallery placeholders

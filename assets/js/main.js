@@ -15,7 +15,7 @@
     const current = location.pathname.replace(/\/+$/, "");
     nav.querySelectorAll("a").forEach(a => {
       const target = new URL(a.href, location.href).pathname.replace(/\/+$/, "");
-      if (target === current || (a.textContent === "Puja Vidhi" && current.endsWith("/puja/satyanarayan-puja.html"))) a.setAttribute("aria-current", "page");
+      if (target === current || (a.textContent === "Puja Vidhi" && (current.endsWith("/puja/satyanarayan-puja.html") || current.endsWith("/puja/rudrabhishek-puha.html")))) a.setAttribute("aria-current", "page");
     });
   }
   document.querySelectorAll("[data-year]").forEach(el => el.textContent = new Date().getFullYear());
@@ -25,6 +25,23 @@
     const open = nav.classList.toggle("is-open");
     toggle.setAttribute("aria-expanded", String(open));
     toggle.textContent = open ? "✕" : "☰";
+  });
+
+  document.querySelectorAll("[data-pdf-fullscreen]").forEach(button => {
+    button.addEventListener("click", async () => {
+      const viewer = document.getElementById(button.getAttribute("aria-controls"));
+      const status = document.querySelector("[data-pdf-status]");
+      if (!viewer || typeof viewer.requestFullscreen !== "function") {
+        status.textContent = "पूर्ण स्क्रीन सुविधा उपलब्ध नहीं है। PDF को नए टैब में खोलें।";
+        return;
+      }
+      try {
+        await viewer.requestFullscreen();
+      } catch (error) {
+        console.error("Could not open the PDF viewer in fullscreen mode.", error);
+        status.textContent = "पूर्ण स्क्रीन नहीं खुल सकी। PDF को नए टैब में खोलें।";
+      }
+    });
   });
 
   document.querySelectorAll("[data-search-form]").forEach(form => {
