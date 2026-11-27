@@ -98,7 +98,7 @@
       "",
       "Thank you."
     ].join("\n");
-    const mailto = `mailto:anandmohantiwary@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailto = `mailto:sanatanbhakti.purohit@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     const status = document.querySelector("#form-status");
     status.textContent = "Opening your email app with a prepared draft. Please review and send it there.";
     location.href = mailto;
