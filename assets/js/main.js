@@ -15,7 +15,7 @@
     const current = location.pathname.replace(/\/+$/, "");
     nav.querySelectorAll("a").forEach(a => {
       const target = new URL(a.href, location.href).pathname.replace(/\/+$/, "");
-      if (target === current || (a.textContent === "Puja Vidhi" && (current.endsWith("/puja/satyanarayan-puja.html") || current.endsWith("/puja/rudrabhishek-puja.html") || current.endsWith("/puja/sunderkand.html") || current.endsWith("/puja/ramanavami.html")))) a.setAttribute("aria-current", "page");
+      if (target === current || (a.textContent === "Puja Vidhi" && (current.endsWith("/puja/satyanarayan-puja.html") || current.endsWith("/puja/rudrabhishek-puja.html") || current.endsWith("/puja/sunderkand.html") || current.endsWith("/puja/ramanavami.html") || current.endsWith("/puja/grihpraveshpuja.html")))) a.setAttribute("aria-current", "page");
     });
   }
   document.querySelectorAll("[data-year]").forEach(el => el.textContent = new Date().getFullYear());
